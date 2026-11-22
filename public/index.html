@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lookup</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main id="home">
+    <h1>Lookup</h1>
+    <form id="form">
+      <input id="q" type="text" autocomplete="off" spellcheck="false"
+             placeholder="Search or enter a web address" aria-label="Search or enter a web address" autofocus>
+      <button id="go" type="submit" disabled>Search</button>
+    </form>
+    <p id="status" role="status">Starting up…</p>
+  </main>
+
+  <section id="view" hidden>
+    <header>
+      <button id="back" type="button">New search</button>
+      <span id="current"></span>
+    </header>
+    <iframe id="frame" title="Proxied page"></iframe>
+  </section>
+
+  <script src="/uv/uv.bundle.js"></script>
+  <script src="/uv/uv.config.js"></script>
+  <script src="/baremux/index.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
